@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.it.web.mapper.UserMapper">
+        <select id="getUserById" resultType="org.it.web.bean.User">
+            SELECT * FROM user WHERE id=#{id}
+        </select>
+         <select id="getUserByName" parameterType="String" resultType="org.it.web.bean.User">
+            SELECT * FROM user WHERE username=#{username}
+        </select>
+    <insert id="insertUser" parameterType="org.it.web.bean.User">
+        insert into user(username,password,phone,email) value(#{username},#{password},#{phone},#{email})
+    </insert>
+</mapper>

@@ -1,0 +1,6 @@
+# Initializers
+org.springframework.context.ApplicationContextInitializer=\
+org.it.web.listener.StartApplicationContextInitializer
+
+org.springframework.boot.SpringApplicationRunListener=\
+org.it.web.listener.StartApplicationRunListener

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Api Document</title>
+    <!-- Bootstrap -->
+    <link href="/assets/css/api.css" rel="stylesheet">
+    <script src="/webjars/jquery/3.1.0/jquery.min.js" th:src="@{/webjars/jquery/3.1.0/jquery.min.js}"></script>
+    <script src="/assets/js/api.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="/webjars/fontawesome/4.7.0/css/font-awesome.min.css"
+          th:href="@{/webjars/fontawesome/4.7.0/css/font-awesome.min.css}" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrap">
+    <header class="header">
+        <div class="container-fluid border_button">
+            <div class="row">
+                <div class="col-xs-4">
+                    <img src="assets/images/elements/redash_icon_small.png">
+                </div>
+                <div class="text-left col-xs-8">
+                    <h2>Developer docs</h2>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="left-menu col-md-2">
+                    <div id="pos">
+                        <div class="menuheader box">
+                            <div title="漫画、影视、小说、动漫API接口" class="title">
+                                LJL-API
+                            </div>
+                            <label for="interfaceid" id="tip"></label>
+                            <div class="left">
+                                <div class="back-action"><a href="/"><span><i class="fa fa-chevron-left" aria-hidden="true"></i></span> Back to index</a></div>
+                            </div>
+                            <select id="interfaceid"class="form-control">
+                                <option value ="1">api线路一</option>
+                                <option value ="2">api线路二</option>
+                            </select>
+                        </div>
+                        <div class="box">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button id="novel" class="card-link" data-toggle="collapse" href="#collapseOne">
+                                            小说
+                                        </button>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <button id="nv_search" type="button" class="btn btn-default">小说搜索</button>
+                                            <button id="nv_detail" type="button" class="btn btn-default">详细信息</button>
+                                            <button id="nv_link" type="button" class="btn btn-default">链接列表</button>
+                                            <button id="nv_content" type="button" class="btn btn-default">小说内容</button>
+                                            <button id="nv_recom" type="button" class="btn btn-default">热门推荐</button>
+                                            <button id="nv_poprecom" type="button" class="btn btn-default">推荐好看的小说</button>
+                                            <button id="nv_readerlove" type="button" class="btn btn-default">人气最高的小说</button>
+                                            <button id="nv_bookfriendrecom" type="button" class="btn btn-default">书友推荐的小说</button>
+                                            <button id="nv_fenlei" type="button" class="btn btn-default">分类</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button id="donman" class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                            动漫
+                                        </button>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <button id="dm_search" type="button" class="btn btn-default">动漫搜索</button>
+                                            <button id="dm_detail" type="button" class="btn btn-default">详细信息</button>
+                                            <button id="dm_zhiyuan" type="button" class="btn btn-default">播放资源</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button id="manhua" class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                            漫画
+                                        </button>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <button id="mh_search" type="button" class="btn btn-default">漫画搜索</button>
+                                            <button id="mh_detail" type="button" class="btn btn-default">详细信息</button>
+                                            <button id="mh_zhiyuan" type="button" class="btn btn-default">图片资源</button>
+                                            <button id="mh_sort" type="button" class="btn btn-default">漫画分类</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <button id="movie" class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                                            电影
+                                        </button>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <button id="mv_search" type="button" class="btn btn-default">电影搜索</button>
+                                            <button id="mv_detail" type="button" class="btn btn-default">详细信息</button>
+                                            <button id="mv_zhiyuan" type="button" class="btn btn-default">电影资源</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content col-md-10">
+                    <div class="data">
+                        <h1 id="apitype">小说</h1>
+                        <h3 class="api-name">搜索<small style="float: right">最后修改于2020-2-14</small></h3>
+                        <div class="api-show">
+                            <div class="doc-item"
+                                 style="margin-top: 0px; display: flex; justify-content: space-between; align-items: flex-end;">
+                                <div style="display: flex; align-items: center;">
+                                            <span class="el-tag el-tag--light method-get">GET
+                                            </span>
+                                    <span class="tag-url el-tag el-tag--info el-tag--light" id="apiLink">http://api.pingcc.cn/?mhname=</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="request-p doc-item">
+                            <h3 class="section-title">请求参数</h3>
+                            <table class="table">
+                                <thead>
+                                <tr class="table-light">
+                                    <th>参数名</th>
+                                    <th>参数类型</th>
+                                    <th>描述</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td id="reqarg">xsname1</td>
+                                    <td id="argtype">string</td>
+                                    <td id="argdes">搜索名称</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="response-p doc-item">
+                            <h3 class="section-title">返回参数</h3>
+                            <table class="table">
+                                <thead>
+                                <tr class="table-light">
+                                    <th>参数名</th>
+                                    <th>参数类型</th>
+                                    <th>描述</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>list</td>
+                                    <td>list</td>
+                                    <td>结果列表</td>
+                                </tr>
+                                <tr>
+                                    <td>message</td>
+                                    <td>string</td>
+                                    <td>提示信息</td>
+                                </tr>
+                                <tr>
+                                    <td>code</td>
+                                    <td>string</td>
+                                    <td>0失败，1成功</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="describe-title doc-item">
+                            <h3 class="section-title">说明 / 示例</h3>
+                        </div>
+                        <div class="describe-values container-fluid">
+                            <span id="descurl"> 实例：http://api.pingcc.cn/?xsname1=</span><mark id="desarg">灵气逼人</mark>
+                            <div id="resp_des" class="resp_des"></div>
+                            <img class="showpicture" src="assets/images/elements/nv_search.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

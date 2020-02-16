@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Home</title>
+    <!-- Bootstrap -->
+    <link href="/webjars/bootstrap/3.4.1/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="/webjars/fontawesome/4.7.0/css/font-awesome.min.css"
+          th:href="@{/webjars/fontawesome/4.7.0/css/font-awesome.min.css}" rel="stylesheet">
+    <link href="/assets/css/index.css" rel="stylesheet">
+    <script src="/webjars/jquery/3.1.0/jquery.min.js" th:src="@{/webjars/jquery/3.1.0/jquery.min.js}"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="/webjars/bootstrap/3.4.1/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.4.1/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<div class="warpper">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/api">API文档</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">语言 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">中文</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/login.html">登录</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="main">
+        <div class="color-overlay">
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="content">
+                        <div class="jumhead"></div>
+                        <h1 id="intro">
+                            Work hard, <span class="strong colored-text">experience</span> more.
+                        </h1>
+                        <p class="sub-heading">
+                            A place for developers to learn, including kotlin, Java, Python and so on...     </p>
+                        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="text-left">This is a Open Source project</h2>
+                    <p class="highlight-p">Customize and add features, no lock-in, contribute back to the community</p>
+                    <a data-track="true" data-track-location="open-source" track-event="Clicked Community"
+                       class="btn btn-secondary" href="/community/">Our Community</a>
+                </div>
+                <div class="col-md-6" id="open-source-illustrated">
+                    <img src="/assets/images/elements/open-source.png" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/assets/images/elements/visualize-data.png" class="img-responsive">
+            </div>
+            <div class="col-sm-6"><h2 class="text-left">Visualize your data on dashboards</h2>
+                <p class="highlight-p">Always see the big, easy to digest picture for deeper understanding and better
+                    decision making.</p>
+                <ul class="highlight-ul">
+                    <li>Drag &amp; Drop and resize any visualization</li>
+                    <li>Schedule refresh from your data sources</li>
+                    <li>Share dashboards with your team or with the public</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="section section__more-features"><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-xs-12 p-0 flex-content-center flex"><div class="feature-container"><img src="/assets/images/elements/icon-api.png" width="64px"><h4>API</h4></div><div class="feature-container"><img src="/assets/images/elements/icon-alerts.png" width="64px"><h4>Alerts</h4></div><div class="feature-container"><img src="/assets/images/elements/icon-user-management.png" width="64px"><h4>User Management</h4></div></div></div><div class="row"><div class="col-lg-12 text-center"><br><a data-track="true" data-track-location="features" track-event="Clicked All Redash Features" class="btn btn-secondary" href="/product">All Redash Features</a></div></div></div></section>
+    <section class="section section--small get-started">
+        <div class="container">
+            <div class="row get-started--signup text-center">
+                <div class="col-sm-12 p-0"><h3 class="mb-xs">Get started with Redash and build a more data-driven
+                    future</h3><a class="btn btn-lg btn-primary" href="https://app.redash.io/signup"
+                                  data-track-location="get-started" data-track="true"
+                                  data-track-event="Clicked Get Started">Sign Up Free</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="color-overlay">
+            <div class="container">
+                <h4>So, wanna spend some time in website ?</h4>
+                <h2>Be part of a true digital  community for a short/mid-term journey</h2>
+                <a href="step-inside.html" class="link-button">
+                    <button id="apply-button1" class="btn standard-button">Step inside</button>
+                </a>
+            </div> <!-- /END CONTAINER -->
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-md-2 col-sm-3 footer__item"><h3 class="footer__title">Redash</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a class="footer__list-link" href="/product/"
+                                                         data-track-location="footer" data-track="true">Product</a>
+                        </li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="/integrations/"
+                                                         data-track-location="footer"
+                                                         data-track="true">Integrations</a></li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="/slack"
+                                                         data-track-location="footer" data-track="true">Slack
+                            Bot</a></li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="/customers/"
+                                                         data-track-location="footer"
+                                                         data-track="true">Customers</a></li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="/case-studies/"
+                                                         data-track-location="footer" data-track="true">Case
+                            Studies</a></li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="/pricing/"
+                                                         data-track-location="footer" data-track="true">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 col-sm-3 footer__item"><h3 class="footer__title">Company</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a class="footer__list-link" href="/about/"
+                                                         data-track-location="footer" data-track="true">About</a>
+                        </li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="https://blog.redash.io/"
+                                                         data-track-location="footer" data-track="true">Blog</a>
+                        </li>
+                        <li class="footer__list-item"><a class="footer__list-link"
+                                                         href="https://www.getrevue.co/profile/redash"
+                                                         data-track-location="footer"
+                                                         data-track="true">Newsletter</a></li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="/community/"
+                                                         data-track-location="footer"
+                                                         data-track="true">Community</a></li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="/contact/"
+                                                         data-track-location="footer" data-track="true">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 col-sm-3 footer__item"><h3 class="footer__title">Help</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a class="footer__list-link" href="/help/"
+                                                         data-track-location="footer" data-track="true">Knowledge
+                            Base</a></li>
+                        <li class="footer__list-item"><a class="footer__list-link" href="https://discuss.redash.io/"
+                                                         data-track-location="footer" data-track="true">Forum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-3 footer__item--other text-right">
+                    <ul class="footer__list footer__list--social">
+                        <li class="footer__list-item"><a class="footer__list-link"
+                                                         href="https://github.com/getredash"><i
+                                class="fa fa-github-square" aria-hidden="true"></i></a></li>
+                        <li class="footer__list-item"><a class="footer__list-link"
+                                                         href="https://twitter.com/getredash"><i
+                                class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <p><a class="footer__list-link" href="/terms" data-track-location="footer"
+                          data-track="true">Terms</a>
+                        <!-- -->⚬<a class="footer__list-link" href="/privacy" data-track-location="footer"
+                                    data-track="true"> <!-- -->Privacy Policy</a></p></div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+</body>
+</html>
